@@ -97,32 +97,7 @@ function handleSubmit(event){
     search(cityInputElement.value);
 }
 
-function showFahrenheitTemp(event){
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temp");
-    celsiusLink.classList.remove("active");
-    fahrenheitLink.classList.add("active");
-    let fahrenheitTemperature = (celsiusTemp*9)/5+32;
-    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function showCelsiusTemp(event){
-event.preventDefault();
-let temperatureElement = document.querySelector("#temp");
-celsiusLink.classList.add("active");
-fahrenheitLink.classList.remove("active");
-temperatureElement.innerHTML = Math.round(celsiusTemp);
-}
-
-let celsiusTemp = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheitTemp);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelsiusTemp);
 
 search("Sydney");
