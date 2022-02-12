@@ -93,6 +93,7 @@ a:link {
   cursor: pointer;
   position: relative;
   top: -20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 figcaption {
