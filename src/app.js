@@ -101,3 +101,26 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 search("Sydney");
+
+function displayPhoto(response) {
+let pictureElement = document.querySelector ("#picture");
+pictureElement.setAttribute("src", response.data.results[0].urls.thumb);
+}
+
+function searchPhoto (cityPhoto){
+let unsplashApiKey = "ckrFKpgDVOZnBe3VsFFrj7gw_f5mMkaX3dFXbj-4i3M";
+let newApiUrl = "https://api.unsplash.com/search/photos?page=1&per_page=1&";
+
+axios.get(`${newApiUrl}query=${cityPhoto}&client_id=${unsplashApiKey}`).then(displayPhoto);
+}
+
+function handleSubmitPhoto(event){
+event.preventDefault();
+let cityPhotoElement = document.querySelector("#city-input");
+searchPhoto (cityPhotoElement.value);
+}
+
+let formPhoto = document.querySelector("#search-form");
+formPhoto.addEventListener("submit", handleSubmitPhoto);
+
+searchPhoto ("Sydney");

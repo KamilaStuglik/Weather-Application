@@ -1,6 +1,6 @@
 body {
   font-family: "Comfortaa", cursive;
-  background: #cbdef3;
+  background: #cadefc;
 }
 h1 {
   color: #48484a;
@@ -79,4 +79,23 @@ a:link {
 
 .weather-temperature-min {
   opacity: 0.5;
+}
+
+.display_images {
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  font-size: small;
+  border-radius: 8px;
+}
+
+.display_images img {
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  top: -20px;
+}
+
+figcaption {
+  font-weight: normal;
+  font-size: 11px;
 }
