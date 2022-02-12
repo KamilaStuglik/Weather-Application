@@ -1,6 +1,6 @@
 body {
   font-family: "Comfortaa", cursive;
-  background: #cadefc;
+  background: #393e46;
 }
 h1 {
   color: #48484a;
@@ -8,6 +8,7 @@ h1 {
   font-weight: 100;
   line-height: 28px;
   margin-bottom: 0;
+  margin-top: 20px;
 }
 
 ul {
@@ -29,6 +30,15 @@ li:first-letter {
 
 a:link {
   text-decoration: none;
+}
+
+small {
+  color: #ececec;
+}
+
+p {
+  font-size: 9px;
+  text-align: center;
 }
 
 .temperature {
@@ -83,7 +93,7 @@ a:link {
 
 .display_images {
   margin: 0 auto;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: block;
   font-size: small;
   border-radius: 8px;
 }
@@ -91,9 +101,15 @@ a:link {
 .display_images img {
   border-radius: 8px;
   cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.weather-details {
   position: relative;
-  top: -20px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  top: 20px;
 }
 
 figcaption {
